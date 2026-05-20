@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        DateTime theCurrentTime = DateTime.Now;
+        // DateTime theCurrentTime = DateTime.Now;
         PromptGenerator promptGenerator = new PromptGenerator();
         Journal journal = new Journal();
         
@@ -27,7 +27,7 @@ class Program
             {
                 Entry entry = new Entry();
 
-                entry._date = theCurrentTime.ToShortDateString();
+                entry._date = DateTime.Now.ToShortDateString();
                 entry._promptText = promptGenerator.GetRandomPrompt();
                 Console.WriteLine(entry._promptText);
                 entry._entryText = Console.ReadLine();
