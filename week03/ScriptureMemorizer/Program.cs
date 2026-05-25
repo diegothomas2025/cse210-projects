@@ -4,6 +4,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
+        Word word = new Word("TRUST");
+        Console.WriteLine(word.GetDisplayText());
+        Console.WriteLine(word.IsHidden());
+
+        word.Shown();
+        Console.WriteLine(word.GetDisplayText());
+
+        word.Hide();
+        Console.WriteLine(word.GetDisplayText());
+
     }
 }
