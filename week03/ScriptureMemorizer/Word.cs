@@ -25,7 +25,7 @@ public class Word
     {
         if (_isHidden == true)
         {
-            return "_";
+            return new string('_', _text.Length);
         }
         else
         {

@@ -22,6 +22,21 @@ public class Scripture
     {
         Random random = new Random();
 
+        int visibleWords = 0;
+
+        foreach (Word word in _words)
+        {
+            if (word.IsHidden() == false)
+            {
+                visibleWords++;
+            }
+        }
+
+        if (numberToHide > visibleWords)
+        {
+            numberToHide = visibleWords;
+        }
+
         int hiddenCount = 0;
 
         while (hiddenCount < numberToHide)
