@@ -7,17 +7,15 @@ public class BreathingActivity : Activity
     
     public void Run()
     {
-        int i = 0;
-        while (GetDuration() > i)
+        DateTime endTime = DateTime.Now.AddSeconds(GetDuration());
+        while (DateTime.Now < endTime)
         {
             Console.WriteLine();
             Console.Write("Breathe in...");
             ShowCountDown(4);
-            i += 4;
             Console.WriteLine();
             Console.Write("Now breathe out...");
             ShowCountDown(6);
-            i += 6;
             Console.WriteLine();
         }
     }

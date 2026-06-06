@@ -22,7 +22,6 @@ public class ReflectingActiviy : Activity
 
     public ReflectingActiviy(string name, string description) : base(name, description)
     {
-
     }
 
     public void Run()

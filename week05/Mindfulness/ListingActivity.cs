@@ -23,13 +23,8 @@ public class ListingActivity : Activity
         ShowCountDown(5);
         Console.WriteLine();
 
-        DateTime endTime = DateTime.Now.AddSeconds(GetDuration());
-
-        while (DateTime.Now < endTime)
-        {
-            Console.ReadLine();
-            _count++;
-        }
+        List<string> listFromUser = GetListFromUser();
+        _count = listFromUser.Count;
         Console.WriteLine($"You listed {_count} items!");
 
     }
@@ -42,8 +37,17 @@ public class ListingActivity : Activity
 
     public List<string> GetListFromUser()
     {
-        List<string> ListFromUser = new List<string>();
-        return ListFromUser;
+        List<string> listFromUser = new List<string>();
 
+        DateTime endTime = DateTime.Now.AddSeconds(GetDuration());
+    
+        while (DateTime.Now < endTime)
+        {
+            Console.Write("> ");
+            string response = Console.ReadLine();
+
+            listFromUser.Add(response);
+        }
+        return listFromUser;
     }
 }
