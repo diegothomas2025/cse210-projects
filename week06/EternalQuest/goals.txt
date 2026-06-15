@@ -1,0 +1,4 @@
+17
+SimpleGoal:aa,aa,1,True
+EternalGoal:aa,aa,1
+ChecklistGoal:aa,aa,1,10,3,3
